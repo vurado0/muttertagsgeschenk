@@ -1,6 +1,6 @@
-# Muttertagsgeschenk – Valencia
+# Geburtstagsgeschenk für Mama
 
-Statische Website (HTML/CSS/JS, keine Abhängigkeiten) als Geschenk zum Muttertag – eine Zeitreise durch unsere Reisen (Mallorca, Lissabon & Madeira, Paris, Valencia).
+Statische Website (HTML/CSS/JS, keine Abhängigkeiten) als Geburtstagsgeschenk für Mama – eine Zeitreise durch unsere Reisen (Mallorca, Lissabon & Madeira, Paris, Valencia).
 
 - `index.html` – die komplette Seite (mobile first, eigenes Desktop-Layout ab 1000 px)
 - `photos/` – Fotos der Reise

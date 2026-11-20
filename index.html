@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Мама, это тебе ♥</title>
-<meta name="description" content="С Днём матери! Наши путешествия и самые красивые моменты — от Владика с любовью.">
+<meta name="description" content="С днём рождения, мама! Наши путешествия и самые красивые моменты — от Владика с любовью.">
 <meta property="og:title" content="Мама, это тебе ♥">
-<meta property="og:description" content="С Днём матери! Наши путешествия и самые красивые моменты.">
+<meta property="og:description" content="С днём рождения, мама! Наши путешествия и самые красивые моменты.">
 <meta property="og:image" content="photos/mama-zoloto.jpg">
 <meta name="theme-color" content="#1a1830">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff5d8f' d='M16 29s-12-7.4-12-16a6.5 6.5 0 0 1 12-3.5A6.5 6.5 0 0 1 28 13c0 8.6-12 16-12 16z'/%3E%3C/svg%3E">
@@ -77,6 +77,8 @@ body.started .hero img{transform:scale(1)}
 .route li::before{content:"";position:absolute;left:-31px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px rgba(255,93,143,.25)}
 .route a{display:block;color:inherit;text-decoration:none;padding:6px 14px;border-radius:12px;transition:background .2s}
 .route a:hover{background:rgba(255,255,255,.08)}
+.route li.more{padding:6px 14px;opacity:.8}
+.route li.more::before{background:transparent;border:2px dashed var(--pink2);box-shadow:none}
 .route .y{font-size:13px;letter-spacing:.24em;opacity:.7}
 .route .pl{font-family:Prata,serif;font-size:24px;line-height:1.2}
 .route .pl small{font-family:Caveat,cursive;font-size:22px;color:var(--pink2);margin-left:6px}
@@ -129,7 +131,7 @@ figure.liked .like{animation:beat .9s ease}
 .stamp img{height:calc(100% - 14px)}
 .stamp span{display:block;text-align:center;font:600 8px/14px Manrope,sans-serif;letter-spacing:.12em;color:#e23d6f}
 .envelope h2{font-family:Caveat,cursive;font-weight:700;font-size:54px;color:#e23d6f;line-height:1;margin-bottom:12px}
-.typed{font-family:Caveat,cursive;font-size:27px;line-height:1.3;min-height:11em;white-space:pre-line}
+.typed{font-family:Caveat,cursive;font-size:27px;line-height:1.3;min-height:4em;white-space:pre-line}
 .typed .cur{display:inline-block;width:2px;height:1em;background:#e23d6f;vertical-align:-2px;margin-left:2px;animation:pulse 1s steps(1) infinite}
 .sign{font-family:Caveat,cursive;font-weight:700;font-size:36px;text-align:right;color:#e23d6f;margin-top:8px;opacity:0;transform:translateY(8px);transition:opacity .8s,transform .8s}
 .sign.show{opacity:1;transform:none}
@@ -139,6 +141,31 @@ figure.liked .like{animation:beat .9s ease}
 .hug button svg{width:18px;height:18px;animation:beat 1.4s ease-in-out infinite}
 .hugmsg{text-align:center;font-family:Caveat,cursive;font-size:30px;color:var(--pink2);margin-top:14px;min-height:1.3em}
 footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;position:relative;z-index:1}
+
+/* ---------- birthday cake ---------- */
+.bday{text-align:center}
+.bt{font-size:clamp(40px,9vw,76px);margin:.2em 0 .1em}
+.cake{position:relative;width:210px;height:200px;margin:34px auto 0;cursor:pointer;transition:transform .2s}
+.cake:active{transform:scale(.97)}
+.plate{position:absolute;bottom:0;left:-16px;right:-16px;height:16px;border-radius:50%;background:#f6e7ee;box-shadow:0 14px 30px -10px rgba(0,0,0,.6)}
+.t1{position:absolute;bottom:8px;left:0;right:0;height:74px;border-radius:14px 14px 10px 10px;background:linear-gradient(180deg,#ff8fab,#e23d6f)}
+.t1::before,.t2::before{content:"";position:absolute;left:0;right:0;top:0;height:18px;border-radius:14px 14px 0 0;background:radial-gradient(circle at 10px 8px,#fff7f3 9px,transparent 10px) -2px 4px/20px 20px repeat-x,linear-gradient(#fff7f3,#fff7f3) 0 0/100% 8px no-repeat}
+.t2{position:absolute;bottom:82px;left:30px;right:30px;height:58px;border-radius:12px 12px 6px 6px;background:linear-gradient(180deg,#ffd6e0,#ffb3c6)}
+.t2::after{content:"";position:absolute;inset:26px 14px 10px;background:radial-gradient(circle,#e23d6f 3px,transparent 4px) 0 0/22px 16px}
+.candles{position:absolute;bottom:140px;left:0;right:0;display:flex;justify-content:center;gap:26px}
+.candles i{position:relative;width:11px;height:40px;border-radius:3px;background:repeating-linear-gradient(45deg,#fff 0 5px,#ffb3c6 5px 10px)}
+.candles b{position:absolute;left:50%;top:-24px;width:14px;height:22px;margin-left:-7px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 72%,#fff8d6 0,#ffd28a 40%,#ff8a3d 78%,transparent 80%);box-shadow:0 0 22px 8px rgba(255,200,90,.45);transform-origin:50% 90%;animation:flick .18s ease-in-out infinite alternate;transition:opacity .4s,transform .4s}
+.candles i:nth-child(2) b{animation-delay:.07s}.candles i:nth-child(3) b{animation-delay:.13s}
+.candles i::after{content:"";position:absolute;left:50%;top:-30px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:rgba(255,255,255,.5);opacity:0}
+.cake.out b{opacity:0;transform:scale(.1)}
+.cake.out i::after{animation:smoke 1.6s ease-out forwards}
+@keyframes flick{from{transform:rotate(-3deg) scaleY(1)}to{transform:rotate(3deg) scaleY(1.12)}}
+@keyframes smoke{0%{opacity:.7;transform:translateY(0) scale(1)}100%{opacity:0;transform:translateY(-50px) scale(3.5)}}
+.caketap{font-family:Caveat,cursive;font-size:26px;color:var(--pink2);margin-top:22px;animation:pulse 1.8s ease-in-out infinite}
+.cardwrap{display:none;margin-top:60px;perspective:1200px}
+.cardwrap.open{display:block}
+.cardwrap.open .envelope{animation:unfold 1.1s cubic-bezier(.2,.8,.2,1) both;transform-origin:50% 0}
+@keyframes unfold{from{transform:rotateX(-80deg);opacity:0}to{transform:none;opacity:1}}
 
 /* ---------- desktop (mobile first: everything above is the phone layout) ---------- */
 .hint .d{display:none}
@@ -173,6 +200,7 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
   .envelope{width:min(640px,100%);padding:52px 50px 44px}
   .envelope h2{font-size:62px}
   .typed{font-size:30px}
+  .cake{transform:scale(1.15);margin-top:46px}
   .sign{font-size:40px}
 }
 .rv{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s ease}
@@ -210,7 +238,7 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 <header class="hero" data-bg="#2a2350">
   <img src="photos/mama-zoloto.jpg" alt="Мама в золотом вечернем свете">
   <div class="txt">
-    <div class="kicker"><svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg>С Днём матери<svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg></div>
+    <div class="kicker"><svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg>С днём рождения<svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg></div>
     <h1>Мама</h1>
     <p>Все наши места — и ты в каждом из них.</p>
     <a class="down" href="#route">листай вниз ↓</a>
@@ -220,12 +248,13 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 <section class="route" id="route" data-bg="#1b2a44">
   <div class="rv">
     <h2>Наши путешествия</h2>
-    <p class="sub">Пять лет, три страны — и всегда вместе.</p>
+    <p class="sub">Лишь несколько остановок — а путешествий было гораздо больше.</p>
     <ol>
       <li><a href="#mallorca"><div class="y">ИЮЛЬ 2021</div><div class="pl">Майорка <small>море и скалы</small></div></a></li>
       <li><a href="#madeira"><div class="y">ОКТЯБРЬ 2023</div><div class="pl">Лиссабон и Мадейра <small>остров цветов</small></div></a></li>
       <li><a href="#paris"><div class="y">НОЯБРЬ 2024</div><div class="pl">Париж <small>немного сказки</small></div></a></li>
       <li><a href="#valencia"><div class="y">ОКТЯБРЬ 2026</div><div class="pl">Валенсия <small>розовое небо</small></div></a></li>
+      <li class="more"><div class="y">И ЕЩЁ…</div><div class="pl">столько мест <small>что не сосчитать</small></div></li>
       <li><a href="#moments"><div class="y">ВСЕГДА</div><div class="pl">Моменты <small>просто ты</small></div></a></li>
     </ol>
   </div>
@@ -298,18 +327,29 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 
 <section class="final" data-bg="#1a1830">
   <div style="width:100%">
-    <div class="envelope rv" id="letter">
-      <div class="stamp"><img src="photos/madeira-serdce.jpg" alt="" loading="lazy"><span>С ЛЮБОВЬЮ</span></div>
-      <h2>Мама,</h2>
-      <div class="typed" id="typed" aria-live="polite"></div>
-      <div class="sign" id="sign">Твой Владик ♥</div>
+    <div class="bday rv">
+      <div class="time">сегодня твой день</div>
+      <h2 class="bt">С днём рождения,<br>мама!</h2>
+      <div class="cake" id="cake" role="button" tabindex="0" aria-label="Задуть свечи">
+        <div class="candles"><i><b></b></i><i><b></b></i><i><b></b></i></div>
+        <div class="t2"></div><div class="t1"></div><div class="plate"></div>
+      </div>
+      <div class="caketap" id="caketap">загадай желание и нажми на торт ✨</div>
     </div>
-    <div class="hug"><button id="hug" type="button"><svg viewBox="0 0 32 30" fill="#fff"><use href="#h"/></svg>Обнять маму</button></div>
-    <div class="hugmsg" id="hugmsg"></div>
+    <div class="cardwrap" id="cardwrap">
+      <div class="envelope" id="letter">
+        <div class="stamp"><img src="photos/madeira-serdce.jpg" alt="" loading="lazy"><span>С ЛЮБОВЬЮ</span></div>
+        <h2>Мама,</h2>
+        <div class="typed" id="typed" aria-live="polite"></div>
+        <div class="sign" id="sign">Твой Владик ♥</div>
+      </div>
+      <div class="hug"><button id="hug" type="button"><svg viewBox="0 0 32 30" fill="#fff"><use href="#h"/></svg>Обнять маму</button></div>
+      <div class="hugmsg" id="hugmsg"></div>
+    </div>
   </div>
 </section>
 </main>
-<footer>Майорка · Мадейра · Париж · Валенсия · с любовью от Владика</footer>
+<footer>Майорка · Мадейра · Париж · Валенсия · и ещё много-много мест · с любовью от Владика</footer>
 
 <script>
 (()=>{
@@ -423,18 +463,25 @@ const hfo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const
 hfo.observe(hf);
 
 /* typewriter letter */
-const TEXT='спасибо тебе за все наши путешествия — за море Майорки, сердце на Мадейре, огни Парижа и розовое небо Валенсии.\n\nНо самое главное — спасибо, что ты всегда рядом, что веришь в меня и так сильно любишь нас с Софией.\n\nС Днём матери! Я тебя очень люблю ♥';
+const TEXT='с днём рождения! Спасибо тебе за все наши путешествия — Майорку, Мадейру, Париж, Валенсию и ещё столько мест, что их и не сосчитать. Каждое из них стало особенным, потому что ты была рядом.\n\nТы знаешь, как сильно я мечтаю о Японии. Спасибо, что ты с самого начала поддержала эту идею и веришь в меня — даже тогда, когда мне самому страшно. Твоя вера даёт мне смелость идти за мечтой. И куда бы я ни поехал, хоть на другой конец света, — частичка тебя всегда будет со мной.\n\nЖелаю тебе здоровья, счастья, лёгкости и ещё очень-очень много путешествий — и в Японию ко мне тоже!\n\nЯ тебя очень люблю ♥';
 const typed=document.getElementById('typed'),sign=document.getElementById('sign');
 function type(){
   if(reduce){typed.textContent=TEXT;sign.classList.add('show');return}
   let i=0;const cur=document.createElement('span');cur.className='cur';
   const step=()=>{typed.textContent=TEXT.slice(0,i);typed.appendChild(cur);
-    if(i<TEXT.length){const ch=TEXT[i++];setTimeout(step,ch==='\n'?220:/[,.!—]/.test(ch)?160:28)}
+    if(i<TEXT.length){const ch=TEXT[i++];setTimeout(step,ch==='\n'?200:/[,.!—]/.test(ch)?130:20)}
     else{cur.remove();sign.classList.add('show');const r=sign.getBoundingClientRect();setTimeout(()=>burst(r.right-60,r.top+20,16,.8),400)}};
   step();
 }
-const lo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){type();lo.disconnect()}}),{threshold:.35});
-lo.observe(document.getElementById('letter'));
+const cake=document.getElementById('cake'),wrap=document.getElementById('cardwrap');
+function blow(){
+  if(cake.classList.contains('out'))return;
+  cake.classList.add('out');document.getElementById('caketap').textContent='желание загадано ♥';
+  const r=cake.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height*.3,40,1.6);rain(70);
+  setTimeout(()=>{wrap.classList.add('open');wrap.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});setTimeout(type,900)},1300);
+}
+cake.addEventListener('click',blow);
+cake.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();blow()}});
 
 /* hug */
 const msgs=['Обнимаю крепко-крепко!','И ещё раз!','Люблю тебя, мама ♥','Ещё одно объятие ♥','Ты самая лучшая!'];let hn=0;

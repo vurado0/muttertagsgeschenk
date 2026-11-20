@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Мама, это тебе ♥</title>
-<meta name="description" content="С Днём матери! Один день в Валенсии — от Владика с любовью.">
+<meta name="description" content="С Днём матери! Наши путешествия и самые красивые моменты — от Владика с любовью.">
 <meta property="og:title" content="Мама, это тебе ♥">
-<meta property="og:description" content="С Днём матери! Один день в Валенсии.">
-<meta property="og:image" content="photos/hero.jpg">
+<meta property="og:description" content="С Днём матери! Наши путешествия и самые красивые моменты.">
+<meta property="og:image" content="photos/mama-zoloto.jpg">
 <meta name="theme-color" content="#1a1830">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ff5d8f' d='M16 29s-12-7.4-12-16a6.5 6.5 0 0 1 12-3.5A6.5 6.5 0 0 1 28 13c0 8.6-12 16-12 16z'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -19,7 +19,6 @@ body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Manrope,system-ui,s
 body.locked{overflow:hidden;height:100svh}
 img{display:block;width:100%;height:100%;object-fit:cover;-webkit-user-drag:none;user-select:none}
 h1,h2,.prata{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.1}
-.hand{font-family:Caveat,cursive;font-weight:700}
 #sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
 main{position:relative;z-index:1}
 .fx{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}
@@ -55,23 +54,40 @@ main{position:relative;z-index:1}
 
 /* ---------- hero ---------- */
 .hero{position:relative;height:100svh;min-height:560px;display:grid;place-items:end center;overflow:hidden}
-.hero img{position:absolute;inset:0;object-position:50% 30%;transform:scale(1.08);transition:transform 6s ease-out}
+.hero img{position:absolute;inset:0;object-position:62% 35%;transform:scale(1.08);transition:transform 6s ease-out}
 body.started .hero img{transform:scale(1)}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,var(--bg) 100%);transition:background 1.2s}
-.hero .txt{position:relative;z-index:1;text-align:center;padding:0 24px 13vh}
-.kicker{font-size:13px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;display:inline-flex;gap:8px;align-items:center}
+.hero .txt{position:relative;z-index:1;text-align:center;padding:0 24px 12vh}
+.kicker{font-size:13px;letter-spacing:.3em;text-transform:uppercase;opacity:.95;display:inline-flex;gap:8px;align-items:center}
 .kicker svg{width:14px;height:14px;animation:beat 1.4s ease-in-out infinite}
-.hero h1{font-size:clamp(44px,10vw,96px);margin:.2em 0}
-.hero p{opacity:.92;max-width:32ch;margin:0 auto}
-.down{display:inline-block;color:inherit;text-decoration:none;margin-top:26px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.7;animation:bob 2.4s ease-in-out infinite}
+.hero h1{font-size:clamp(64px,16vw,140px);margin:.1em 0 .12em}
+.hero p{opacity:.95;max-width:30ch;margin:0 auto}
+.down{display:inline-block;margin-top:26px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;opacity:.75;color:inherit;text-decoration:none;animation:bob 2.4s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(6px)}}
 @keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}45%{transform:scale(1.18)}}
+
+/* ---------- route ---------- */
+.route{min-height:90svh;display:grid;place-items:center;padding:90px 24px}
+.route h2{font-size:clamp(34px,7vw,56px);text-align:center;margin-bottom:8px}
+.route .sub{text-align:center;opacity:.85;margin-bottom:38px}
+.route ol{list-style:none;position:relative;max-width:420px;margin:0 auto;padding-left:34px}
+.route ol::before{content:"";position:absolute;left:9px;top:10px;bottom:10px;border-left:2px dashed rgba(255,255,255,.35)}
+.route li{position:relative;margin:0 0 22px}
+.route li:last-child{margin-bottom:0}
+.route li::before{content:"";position:absolute;left:-31px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 4px rgba(255,93,143,.25)}
+.route a{display:block;color:inherit;text-decoration:none;padding:6px 14px;border-radius:12px;transition:background .2s}
+.route a:hover{background:rgba(255,255,255,.08)}
+.route .y{font-size:13px;letter-spacing:.24em;opacity:.7}
+.route .pl{font-family:Prata,serif;font-size:24px;line-height:1.2}
+.route .pl small{font-family:Caveat,cursive;font-size:22px;color:var(--pink2);margin-left:6px}
 
 /* ---------- stops ---------- */
 .stop{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:90px 0}
 .stop .meta{text-align:center;padding:0 24px;margin-bottom:30px}
-.time{font-size:13px;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
-.stop h2{font-size:clamp(36px,7vw,64px);margin:.25em 0 .3em}
+.time{font-size:13px;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.pin{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;padding:5px 12px 5px 9px;border-radius:999px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pin svg{width:14px;height:14px;fill:var(--pink2)}
+.stop h2{font-size:clamp(36px,7vw,64px);margin:.2em 0 .25em}
 .stop p{max-width:36ch;margin:0 auto;opacity:.9}
 .strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px max(24px,calc(50vw - 150px)) 22px;scrollbar-width:none}
 .strip::-webkit-scrollbar{display:none}
@@ -79,6 +95,7 @@ body.started .hero img{transform:scale(1)}
 .strip figure:nth-child(odd){--r:-1.5deg}.strip figure:nth-child(even){--r:1.5deg}
 .strip figure.on{transform:none;opacity:1}
 .strip figure.w{flex-basis:min(520px,88vw);aspect-ratio:16/9;align-self:center}
+.strip figure.q{aspect-ratio:3/4}
 .strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 14px 12px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));font-family:Caveat,cursive;font-size:24px;line-height:1.1}
 .like{position:absolute;top:10px;right:10px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.28);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:transform .2s}
 .like svg{width:20px;height:20px}
@@ -92,15 +109,15 @@ figure.liked .like{animation:beat .9s ease}
 .dots{display:flex;justify-content:center;gap:7px;margin-top:4px}
 .dots b{width:6px;height:6px;border-radius:50%;background:#fff;opacity:.3;transition:opacity .3s,transform .3s}
 .dots b.on{opacity:1;transform:scale(1.3)}
+.dots:has(b:only-child){display:none}
 
 /* ---------- heart frame ---------- */
 .love{min-height:100svh;display:grid;place-items:center;text-align:center;padding:90px 24px}
 .love h2{font-size:clamp(36px,7vw,60px);margin-bottom:8px}
 .love p{opacity:.9;max-width:34ch;margin:0 auto 30px}
 .hframe{position:relative;width:min(340px,82vw);aspect-ratio:1;margin:0 auto;animation:beat 2.4s ease-in-out infinite;cursor:pointer}
-.hframe svg.clip{position:absolute;width:0;height:0}
 .hframe .img{position:relative;width:100%;height:100%;overflow:hidden;clip-path:url(#heartClip)}
-.hframe .img img{position:absolute;width:135%;height:auto;left:-35%;top:-72%}
+.hframe .img img{position:absolute;width:115%;height:auto;left:-7%;top:-30%}
 .hframe .glow{position:absolute;inset:-14%;z-index:-1;background:radial-gradient(circle,rgba(255,93,143,.55),transparent 62%);filter:blur(10px)}
 .names{font-family:Caveat,cursive;font-size:30px;margin-top:18px;color:var(--pink2)}
 
@@ -112,7 +129,7 @@ figure.liked .like{animation:beat .9s ease}
 .stamp img{height:calc(100% - 14px)}
 .stamp span{display:block;text-align:center;font:600 8px/14px Manrope,sans-serif;letter-spacing:.12em;color:#e23d6f}
 .envelope h2{font-family:Caveat,cursive;font-weight:700;font-size:54px;color:#e23d6f;line-height:1;margin-bottom:12px}
-.typed{font-family:Caveat,cursive;font-size:27px;line-height:1.3;min-height:9.5em;white-space:pre-line}
+.typed{font-family:Caveat,cursive;font-size:27px;line-height:1.3;min-height:11em;white-space:pre-line}
 .typed .cur{display:inline-block;width:2px;height:1em;background:#e23d6f;vertical-align:-2px;margin-left:2px;animation:pulse 1s steps(1) infinite}
 .sign{font-family:Caveat,cursive;font-weight:700;font-size:36px;text-align:right;color:#e23d6f;margin-top:8px;opacity:0;transform:translateY(8px);transition:opacity .8s,transform .8s}
 .sign.show{opacity:1;transform:none}
@@ -123,23 +140,25 @@ figure.liked .like{animation:beat .9s ease}
 .hugmsg{text-align:center;font-family:Caveat,cursive;font-size:30px;color:var(--pink2);margin-top:14px;min-height:1.3em}
 footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;position:relative;z-index:1}
 
-
 /* ---------- desktop (mobile first: everything above is the phone layout) ---------- */
 .hint .d{display:none}
 @media (min-width:1000px){
   body{font-size:18px}
-  .hero img{object-position:50% 40%}
-  .hero .txt{padding-bottom:16vh}
+  .hero img{object-position:50% 30%}
+  .hero .txt{padding-bottom:14vh}
+  .route ol{max-width:520px}
   .stop{padding:110px 0}
   .stop .meta{margin-bottom:46px}
   .stop p{max-width:44ch}
   .strip{overflow:visible;justify-content:center;align-items:center;scroll-snap-type:none;padding:30px 60px 40px;max-width:1400px;margin:0 auto}
   .strip figure,.strip figure.on{flex:0 1 230px;min-width:0;margin:0 -16px;opacity:1;transform:translateY(var(--y,0)) rotate(var(--r,0deg))}
+  .strip figure.q,.strip figure.q.on{flex-basis:280px}
   .strip figure.w,.strip figure.w.on{flex-basis:380px;z-index:1}
   .strip figure:not(.w){z-index:2}
   .strip figure:nth-child(odd){--r:-4deg;--y:10px}
   .strip figure:nth-child(even){--r:3deg;--y:-8px}
   .strip figure:nth-child(3n){--r:-1.5deg;--y:0px}
+  .strip figure:only-child{--r:-2deg}
   .strip figure:hover{transform:translateY(-18px) scale(1.07) rotate(0deg);z-index:5;box-shadow:0 40px 80px -30px rgba(0,0,0,.75)}
   .strip figcaption{font-size:22px}
   .strip figure.w figcaption{text-align:center}
@@ -149,13 +168,9 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
   .hint .m{display:none}.hint .d{display:inline}
   .love>.rv{display:grid;grid-template-columns:420px minmax(0,440px);grid-template-rows:1fr auto auto auto 1fr;column-gap:70px;row-gap:16px;text-align:left}
   .love .hframe{width:420px;grid-row:1/6;grid-column:1;align-self:center}
-  .love h2{grid-row:2}.love p{grid-row:3}.love .names{grid-row:4}
-  .love h2,.love p,.love .names{grid-column:2}
-  .love h2{font-size:58px}
-  .love p{margin:0;max-width:none}
-  .love .names{margin-top:6px;font-size:34px}
+  .love h2{grid-row:2;font-size:58px}.love p{grid-row:3;margin:0;max-width:none}.love .names{grid-row:4;margin-top:6px;font-size:34px}
   .final{padding-top:120px}
-  .envelope{width:min(640px,100%);margin:0 auto;padding:52px 50px 44px}
+  .envelope{width:min(640px,100%);padding:52px 50px 44px}
   .envelope h2{font-size:62px}
   .typed{font-size:30px}
   .sign{font-size:40px}
@@ -170,6 +185,7 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="h" viewBox="0 0 32 30"><path d="M16 28.5S2 20 2 10.2A7.2 7.2 0 0 1 16 7.4a7.2 7.2 0 0 1 14 2.8C30 20 16 28.5 16 28.5z"/></symbol>
+    <symbol id="p" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
     <clipPath id="heartClip" clipPathUnits="objectBoundingBox"><path d="M.5 .95S.03 .67 .03 .33A.24 .24 0 0 1 .5 .22a.24 .24 0 0 1 .47 .11C.97 .67 .5 .95 .5 .95z"/></clipPath>
   </defs>
 </svg>
@@ -191,63 +207,79 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 </div>
 
 <main>
-<header class="hero" data-bg="#1b2a44">
-  <img src="photos/hero.jpg" alt="Рассвет над Валенсией">
+<header class="hero" data-bg="#2a2350">
+  <img src="photos/mama-zoloto.jpg" alt="Мама в золотом вечернем свете">
   <div class="txt">
     <div class="kicker"><svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg>С Днём матери<svg viewBox="0 0 32 30" fill="#ff5d8f"><use href="#h"/></svg></div>
-    <h1>Один день<br>в Валенсии</h1>
-    <p>От рассвета до ночи — для тебя, мама.</p>
-    <a class="down" href="#s1">листай вниз ↓</a>
+    <h1>Мама</h1>
+    <p>Все наши места — и ты в каждом из них.</p>
+    <a class="down" href="#route">листай вниз ↓</a>
   </div>
 </header>
 
-<section class="stop" id="s1" data-bg="#2c5378">
-  <div class="meta rv"><div class="time">08:00</div><h2>Утро у моря</h2><p>Пальмы под окном, тёплый песок — и София, которая встала раньше всех.</p></div>
+<section class="route" id="route" data-bg="#1b2a44">
+  <div class="rv">
+    <h2>Наши путешествия</h2>
+    <p class="sub">Пять лет, три страны — и всегда вместе.</p>
+    <ol>
+      <li><a href="#mallorca"><div class="y">ИЮЛЬ 2021</div><div class="pl">Майорка <small>море и скалы</small></div></a></li>
+      <li><a href="#madeira"><div class="y">ОКТЯБРЬ 2023</div><div class="pl">Лиссабон и Мадейра <small>остров цветов</small></div></a></li>
+      <li><a href="#paris"><div class="y">НОЯБРЬ 2024</div><div class="pl">Париж <small>немного сказки</small></div></a></li>
+      <li><a href="#valencia"><div class="y">ОКТЯБРЬ 2026</div><div class="pl">Валенсия <small>розовое небо</small></div></a></li>
+      <li><a href="#moments"><div class="y">ВСЕГДА</div><div class="pl">Моменты <small>просто ты</small></div></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="stop" id="mallorca" data-bg="#1d5c78">
+  <div class="meta rv"><div class="time">июль 2021</div><h2>Майорка</h2><p>Бирюзовое море у мыса Форментор и ужин с видом на закат.</p><div class="pin"><svg viewBox="0 0 24 24"><use href="#p"/></svg>Майорка, Испания</div></div>
   <div class="strip">
-    <figure><img src="photos/utro-sofia.jpg" alt="София утром" loading="lazy"><figcaption>София уже не спит</figcaption></figure>
-    <figure><img src="photos/palmy.jpg" alt="Пальмы и пляж" loading="lazy"><figcaption>вид из окна</figcaption></figure>
-    <figure class="w"><img src="photos/plyazh-koleso.jpg" alt="Колесо на пляже" loading="lazy"><figcaption>колесо на пляже!</figcaption></figure>
-    <figure><img src="photos/parus.jpg" alt="Парусник" loading="lazy"><figcaption>парусник на горизонте</figcaption></figure>
-    <figure class="w"><img src="photos/more.jpg" alt="Море" loading="lazy"><figcaption>наше море</figcaption></figure>
-    <figure><img src="photos/dvorik.jpg" alt="Дворик с бассейном" loading="lazy"><figcaption>тропический дворик</figcaption></figure>
+    <figure><img src="photos/mallorca-formentor.jpg" alt="Мама и София на мысе Форментор" loading="lazy"><figcaption>мыс Форментор · с Софией</figcaption></figure>
+    <figure><img src="photos/mallorca-uzhin.jpg" alt="Ужин у моря" loading="lazy"><figcaption>ужин у моря, Камп-де-Мар</figcaption></figure>
   </div>
   <div class="dots"></div>
   <div class="hint rv"><span class="m">дважды нажми на фото ♥</span><span class="d">наведи и дважды кликни на фото ♥</span></div>
 </section>
 
-<section class="stop" data-bg="#7a3f28">
-  <div class="meta rv"><div class="time">14:00</div><h2>Рынок и старый город</h2><p>Паэлья на рынке, драконий фрукт, узкие улочки и собор, на который смотришь снизу вверх.</p></div>
+<section class="stop" id="madeira" data-bg="#1f5650">
+  <div class="meta rv"><div class="time">октябрь 2023</div><h2>Лиссабон и Мадейра</h2><p>Ночь у воды в Лиссабоне, сердце на краю острова и мама за штурвалом.</p><div class="pin"><svg viewBox="0 0 24 24"><use href="#p"/></svg>Португалия</div></div>
   <div class="strip">
-    <figure><img src="photos/rynok.jpg" alt="Центральный рынок" loading="lazy"><figcaption>Центральный рынок</figcaption></figure>
+    <figure><img src="photos/lissabon-noch.jpg" alt="Ночь в Лиссабоне" loading="lazy"><figcaption>ночной Лиссабон</figcaption></figure>
+    <figure><img src="photos/madeira-serdce.jpg" alt="Мама в рамке-сердце на Мадейре" loading="lazy"><figcaption>Мадейра в сердечке ♥</figcaption></figure>
+    <figure><img src="photos/madeira-parus.jpg" alt="Мама за штурвалом яхты в Фуншале" loading="lazy"><figcaption>капитан мама, Фуншал</figcaption></figure>
+  </div>
+  <div class="dots"></div>
+</section>
+
+<section class="stop" id="paris" data-bg="#4a2a5e">
+  <div class="meta rv"><div class="time">ноябрь 2024</div><h2>Париж</h2><p>Огни Диснейленда — и мама, которая снова стала маленькой девочкой.</p><div class="pin"><svg viewBox="0 0 24 24"><use href="#p"/></svg>Диснейленд, Франция</div></div>
+  <div class="strip">
+    <figure class="q"><img src="photos/parizh-disney.jpg" alt="Мама в Диснейленде" loading="lazy"><figcaption>ушки Минни ♥</figcaption></figure>
+  </div>
+  <div class="dots"></div>
+</section>
+
+<section class="stop" id="valencia" data-bg="#a8642f">
+  <div class="meta rv"><div class="time">октябрь 2026</div><h2>Валенсия</h2><p>Утро у моря, паэлья на рынке, белые арки — и самый розовый закат.</p><div class="pin"><svg viewBox="0 0 24 24"><use href="#p"/></svg>Валенсия, Испания</div></div>
+  <div class="strip">
+    <figure><img src="photos/utro-sofia.jpg" alt="София утром" loading="lazy"><figcaption>София уже не спит</figcaption></figure>
+    <figure class="w"><img src="photos/plyazh-koleso.jpg" alt="Колесо на пляже" loading="lazy"><figcaption>колесо на пляже!</figcaption></figure>
     <figure><img src="photos/paelya.jpg" alt="Паэлья" loading="lazy"><figcaption>та самая паэлья</figcaption></figure>
-    <figure><img src="photos/frukty.jpg" alt="Фрукты" loading="lazy"><figcaption>драконий фрукт</figcaption></figure>
-    <figure><img src="photos/ulochka.jpg" alt="Улочка" loading="lazy"><figcaption>старый город</figcaption></figure>
-    <figure><img src="photos/bashnya.jpg" alt="Башня" loading="lazy"><figcaption>башни и балконы</figcaption></figure>
-    <figure><img src="photos/sobor.jpg" alt="Собор" loading="lazy"><figcaption>собор</figcaption></figure>
-  </div>
-  <div class="dots"></div>
-</section>
-
-<section class="stop" data-bg="#a8642f">
-  <div class="meta rv"><div class="time">17:45</div><h2>Золотой час</h2><p>Белые арки Города искусств и наук в тёплом вечернем свете.</p></div>
-  <div class="strip">
-    <figure><img src="photos/mama-most.jpg" alt="Мама у моста" loading="lazy"><figcaption>самая красивая ♥</figcaption></figure>
-    <figure><img src="photos/opera.jpg" alt="Дворец искусств" loading="lazy"><figcaption>как из будущего</figcaption></figure>
-    <figure class="w"><img src="photos/muzey-voda.jpg" alt="Музей наук" loading="lazy"><figcaption>Музей наук</figcaption></figure>
-    <figure><img src="photos/sofia-most.jpg" alt="София фотографирует" loading="lazy"><figcaption>София-фотограф</figcaption></figure>
-    <figure><img src="photos/mama-zakat.jpg" alt="Мама на мосту" loading="lazy"><figcaption>мама в золотом свете</figcaption></figure>
-  </div>
-  <div class="dots"></div>
-</section>
-
-<section class="stop" data-bg="#a85d76">
-  <div class="meta rv"><div class="time">18:15</div><h2>Розовое небо</h2><p>Небо стало розовым — и мы совсем забыли про время.</p></div>
-  <div class="strip">
+    <figure><img src="photos/valencia-mama.jpg" alt="Мама в Городе искусств и наук" loading="lazy"><figcaption>мама в золотом свете</figcaption></figure>
     <figure><img src="photos/sofia-zakat.jpg" alt="София на закате" loading="lazy"><figcaption>София и небо</figcaption></figure>
-    <figure><img src="photos/sofia-ulybka.jpg" alt="София улыбается" loading="lazy"><figcaption>улыбка!</figcaption></figure>
     <figure class="w"><img src="photos/zakat-panorama.jpg" alt="Закат" loading="lazy"><figcaption>такого неба больше нигде нет</figcaption></figure>
     <figure><img src="photos/vmeste-spinoy.jpg" alt="Мама и София смотрят на закат" loading="lazy"><figcaption>вдвоём</figcaption></figure>
-    <figure><img src="photos/noch.jpg" alt="Мост ночью" loading="lazy"><figcaption>и вот уже ночь</figcaption></figure>
+  </div>
+  <div class="dots"></div>
+</section>
+
+<section class="stop" id="moments" data-bg="#7a3a52">
+  <div class="meta rv"><div class="time">всегда</div><h2>Просто ты</h2><p>Моменты, когда не важно где — важно, что это ты.</p></div>
+  <div class="strip">
+    <figure class="q"><img src="photos/mama-balkon.jpg" alt="Мама на балконе у моря" loading="lazy"><figcaption>утро с видом на море</figcaption></figure>
+    <figure class="q"><img src="photos/mama-koktejl.jpg" alt="Мама с коктейлем" loading="lazy"><figcaption>за тебя!</figcaption></figure>
+    <figure><img src="photos/mama-salzburg.jpg" alt="Мама в Зальцбурге" loading="lazy"><figcaption>большой день · Зальцбург</figcaption></figure>
+    <figure class="q"><img src="photos/vmeste.jpg" alt="Мама и София" loading="lazy"><figcaption>мои любимые</figcaption></figure>
   </div>
   <div class="dots"></div>
 </section>
@@ -255,10 +287,10 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 <section class="love" data-bg="#3a1f45">
   <div class="rv">
     <h2>Мои самые любимые</h2>
-    <p>Самое красивое в Валенсии было не море и не закат — а вы.</p>
+    <p>Самое красивое во всех этих местах было не море и не закат — а вы.</p>
     <div class="hframe" id="hframe" role="button" aria-label="Сердечки">
       <div class="glow"></div>
-      <div class="img"><img src="photos/vmeste.jpg" alt="Мама и София" loading="lazy"></div>
+      <div class="img"><img src="photos/mama-sofia-poceluy.jpg" alt="Мама целует маленькую Софию" loading="lazy"></div>
     </div>
     <div class="names">мама &amp; София</div>
   </div>
@@ -267,7 +299,7 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
 <section class="final" data-bg="#1a1830">
   <div style="width:100%">
     <div class="envelope rv" id="letter">
-      <div class="stamp"><img src="photos/hero.jpg" alt="" loading="lazy"><span>VALÈNCIA</span></div>
+      <div class="stamp"><img src="photos/madeira-serdce.jpg" alt="" loading="lazy"><span>С ЛЮБОВЬЮ</span></div>
       <h2>Мама,</h2>
       <div class="typed" id="typed" aria-live="polite"></div>
       <div class="sign" id="sign">Твой Владик ♥</div>
@@ -277,7 +309,7 @@ footer{text-align:center;padding:10px 20px 50px;opacity:.6;font-size:14px;positi
   </div>
 </section>
 </main>
-<footer>Валенсия · октябрь 2026 · с любовью от Владика</footer>
+<footer>Майорка · Мадейра · Париж · Валенсия · с любовью от Владика</footer>
 
 <script>
 (()=>{
@@ -292,7 +324,6 @@ function heartEl(size,color){
   s.setAttribute('viewBox','0 0 32 30');s.setAttribute('width',size);s.setAttribute('height',size);
   s.innerHTML='<use href="#h" fill="'+color+'"/>';return s;
 }
-/* burst from a point */
 function burst(x,y,n=18,spread=1){
   if(reduce)return;
   for(let i=0;i<n;i++){
@@ -305,7 +336,6 @@ function burst(x,y,n=18,spread=1){
     ],{duration:rnd(1100,1700),easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=()=>el.remove();
   }
 }
-/* rain from top */
 function rain(n=70){
   if(reduce)return;
   const W=innerWidth,H=innerHeight;
@@ -320,14 +350,14 @@ function rain(n=70){
   }
 }
 
-/* ---------- floating hearts canvas ---------- */
+/* floating hearts */
 const cv=document.getElementById('sky'),cx=cv.getContext('2d');let parts=[],dpr=1;
 function size(){dpr=Math.min(devicePixelRatio||1,2);cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;}
 size();addEventListener('resize',size);
 function mk(initial){return{x:rnd(0,innerWidth),y:initial?rnd(0,innerHeight):innerHeight+30,s:rnd(6,16),v:rnd(.25,.7),w:rnd(0,Math.PI*2),a:rnd(.12,.35),c:pick(COLORS)}}
 for(let i=0;i<(innerWidth<600?18:30);i++)parts.push(mk(true));
 function drawHeart(x,y,s){cx.beginPath();cx.moveTo(x,y+s*.3);cx.bezierCurveTo(x,y,x-s*.5,y,x-s*.5,y+s*.3);cx.bezierCurveTo(x-s*.5,y+s*.6,x,y+s*.8,x,y+s);cx.bezierCurveTo(x,y+s*.8,x+s*.5,y+s*.6,x+s*.5,y+s*.3);cx.bezierCurveTo(x+s*.5,y,x,y,x,y+s*.3);cx.fill();}
-function tick(t){
+function tick(){
   cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,innerWidth,innerHeight);
   for(const p of parts){p.y-=p.v;p.w+=.01;const x=p.x+Math.sin(p.w)*14;
     cx.globalAlpha=p.a;cx.fillStyle=p.c;drawHeart(x,p.y,p.s);
@@ -336,7 +366,7 @@ function tick(t){
 }
 requestAnimationFrame(tick);
 
-/* ---------- intro ---------- */
+/* intro */
 const intro=document.getElementById('intro'),gift=document.getElementById('gift');
 function openGift(){
   if(gift.classList.contains('open'))return;
@@ -350,30 +380,30 @@ gift.addEventListener('click',openGift);
 gift.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGift()}});
 intro.addEventListener('click',e=>{if(e.target===intro)openGift()});
 
-/* ---------- tap anywhere = small heart ---------- */
+/* tap anywhere = small hearts */
 document.addEventListener('pointerdown',e=>{
   if(e.target.closest('button,.gift,figure,.hframe,a'))return;
   burst(e.clientX,e.clientY,6,.5);
 });
 
-/* ---------- reveal + section colors ---------- */
+/* reveal + section colors */
 const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>rv.observe(el));
 const bgo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.documentElement.style.setProperty('--bg',e.target.dataset.bg);document.querySelector('meta[name=theme-color]').content=e.target.dataset.bg}}),{rootMargin:'-45% 0px -45% 0px'});
 document.querySelectorAll('[data-bg]').forEach(el=>bgo.observe(el));
 
-/* ---------- progress heart ---------- */
+/* progress heart */
 const bar=document.getElementById('bar'),ph=document.getElementById('pheart');
 addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-innerHeight;const f=m>0?scrollY/m:0;bar.style.width=f*100+'%';ph.style.left=f*100+'%'},{passive:true});
 
-/* ---------- strips: focus, dots, likes ---------- */
+/* strips: focus, dots, likes */
 document.querySelectorAll('.strip').forEach(s=>{
   const figs=[...s.querySelectorAll('figure')],dots=s.nextElementSibling;
   figs.forEach(f=>{dots.appendChild(document.createElement('b'));
     const lk=document.createElement('div');lk.className='like';lk.innerHTML='<svg viewBox="0 0 32 30"><path d="M16 28.5S2 20 2 10.2A7.2 7.2 0 0 1 16 7.4a7.2 7.2 0 0 1 14 2.8C30 20 16 28.5 16 28.5z"/></svg>';f.appendChild(lk);
     const bh=heartEl(110,'#ff5d8f');bh.classList.add('big-heart');f.appendChild(bh);
     let last=0;
-    const like=(e,force)=>{f.classList.add('liked');bh.classList.remove('go');void bh.offsetWidth;bh.classList.add('go');
+    const like=e=>{f.classList.add('liked');bh.classList.remove('go');void bh.offsetWidth;bh.classList.add('go');
       const r=f.getBoundingClientRect();burst(e?e.clientX:r.left+r.width/2,e?e.clientY:r.top+r.height/2,14,.8)};
     f.addEventListener('pointerup',e=>{const now=Date.now();
       if(e.target.closest('.like')){f.classList.contains('liked')?f.classList.remove('liked'):like(e);return}
@@ -386,14 +416,14 @@ document.querySelectorAll('.strip').forEach(s=>{
   figs.forEach(f=>o.observe(f));
 });
 
-/* ---------- heart frame ---------- */
+/* heart frame */
 const hf=document.getElementById('hframe');
 hf.addEventListener('click',e=>burst(e.clientX,e.clientY,26,1.2));
 const hfo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const r=hf.getBoundingClientRect();setTimeout(()=>burst(r.left+r.width/2,r.top+r.height/2,24,1.3),500);hfo.disconnect()}}),{threshold:.6});
 hfo.observe(hf);
 
-/* ---------- typewriter letter ---------- */
-const TEXT='спасибо тебе за этот день в Валенсии — за море по утрам, за паэлью на рынке и за розовое небо, которое мы будем вспоминать ещё долго.\n\nСпасибо, что ты всегда рядом, что веришь в меня и так сильно любишь нас с Софией.\n\nС Днём матери! Я тебя очень люблю ♥';
+/* typewriter letter */
+const TEXT='спасибо тебе за все наши путешествия — за море Майорки, сердце на Мадейре, огни Парижа и розовое небо Валенсии.\n\nНо самое главное — спасибо, что ты всегда рядом, что веришь в меня и так сильно любишь нас с Софией.\n\nС Днём матери! Я тебя очень люблю ♥';
 const typed=document.getElementById('typed'),sign=document.getElementById('sign');
 function type(){
   if(reduce){typed.textContent=TEXT;sign.classList.add('show');return}
@@ -406,7 +436,7 @@ function type(){
 const lo=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){type();lo.disconnect()}}),{threshold:.35});
 lo.observe(document.getElementById('letter'));
 
-/* ---------- hug ---------- */
+/* hug */
 const msgs=['Обнимаю крепко-крепко!','И ещё раз!','Люблю тебя, мама ♥','Ещё одно объятие ♥','Ты самая лучшая!'];let hn=0;
 document.getElementById('hug').addEventListener('click',e=>{
   rain(60);burst(e.clientX,e.clientY,22,1.2);
